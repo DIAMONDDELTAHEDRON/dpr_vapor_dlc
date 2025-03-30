@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="16" height="12" tilewidth="40" tileheight="40" infinite="0" backgroundcolor="#0e001d" nextlayerid="9" nextobjectid="29">
+ <editorsettings>
+  <export target="start.lua" format="lua"/>
+ </editorsettings>
+ <properties>
+  <property name="music" value="resonance_muffled"/>
+  <property name="use_footstep_sounds" type="bool" value="true"/>
+ </properties>
+ <tileset firstgid="1" source="../../tilesets/vapor.tsx"/>
+ <tileset firstgid="101" source="../../tilesets/vapor_objects.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="16" height="12">
+  <data encoding="csv">
+0,0,0,0,0,14,31,31,31,31,16,0,0,0,0,0,
+0,0,0,0,0,14,31,31,31,31,16,0,0,0,0,0,
+0,0,0,0,0,14,31,31,31,31,16,0,0,0,0,0,
+0,0,0,0,0,14,31,31,31,31,16,0,0,0,0,0,
+0,0,0,0,4,7,31,31,31,31,8,6,0,0,0,0,
+0,0,0,4,7,1,2,2,2,2,3,8,6,0,0,0,
+0,0,0,14,1,12,12,12,12,12,12,3,16,0,0,0,
+0,0,0,14,11,12,12,12,12,12,12,13,16,0,0,0,
+0,0,0,14,21,12,12,12,12,12,12,23,16,0,0,0,
+0,0,0,24,17,21,22,22,22,22,23,18,26,0,0,0,
+0,0,0,44,47,25,25,25,25,25,25,48,46,0,0,0,
+0,0,0,0,44,45,45,45,45,45,45,46,0,0,0,0
+</data>
+ </layer>
+ <layer id="7" name="Tile Layer 2" width="16" height="12">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup color="#0000ff" id="4" name="collision">
+  <object id="1" x="160" y="200" width="80" height="40"/>
+  <object id="2" x="120" y="240" width="40" height="120"/>
+  <object id="3" x="160" y="360" width="40" height="40"/>
+  <object id="4" x="200" y="400" width="240" height="40"/>
+  <object id="5" x="440" y="360" width="40" height="40"/>
+  <object id="6" x="480" y="240" width="40" height="120"/>
+  <object id="7" x="400" y="200" width="80" height="40"/>
+  <object id="8" x="400" y="0" width="40" height="200"/>
+  <object id="9" x="200" y="0" width="40" height="200"/>
+ </objectgroup>
+ <objectgroup color="#ff00ff" id="5" name="objects">
+  <object id="10" name="transition" x="240" y="-40" width="160" height="40">
+   <properties>
+    <property name="map" value="intro/pillars_1"/>
+    <property name="marker" value="down"/>
+   </properties>
+  </object>
+  <object id="21" gid="102" x="40" y="200" width="80" height="144"/>
+  <object id="22" gid="102" x="520" y="200" width="80" height="144"/>
+  <object id="25" gid="102" x="40" y="480" width="80" height="144"/>
+  <object id="26" gid="102" x="520" y="480" width="80" height="144"/>
+  <object id="27" name="neonpalmtree" x="220" y="240">
+   <properties>
+    <property name="angle" value="-5"/>
+   </properties>
+   <point/>
+  </object>
+  <object id="28" name="neonpalmtree" x="420" y="240">
+   <properties>
+    <property name="angle" value="5"/>
+   </properties>
+   <point/>
+  </object>
+ </objectgroup>
+ <objectgroup color="#7f00ff" id="6" name="markers">
+  <object id="11" name="up" x="320" y="80">
+   <point/>
+  </object>
+  <object id="12" name="spawn" x="320" y="320">
+   <point/>
+  </object>
+ </objectgroup>
+ <layer id="8" name="overlay" width="16" height="12">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,10,10,0,0,0,0,0,0,0,0,0,0,10,10,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,10,10,0,0,0,0,0,0,0,0,0,0,10,10,0
+</data>
+ </layer>
+</map>
