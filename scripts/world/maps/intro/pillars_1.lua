@@ -1,7 +1,7 @@
 return {
-  version = "1.9",
+  version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.9.0",
+  tiledversion = "1.10.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -9,8 +9,8 @@ return {
   height = 12,
   tilewidth = 40,
   tileheight = 40,
-  nextlayerid = 10,
-  nextobjectid = 28,
+  nextlayerid = 11,
+  nextobjectid = 29,
   backgroundcolor = { 14, 0, 29 },
   properties = {
     ["music"] = "resonance_muffled",
@@ -49,7 +49,7 @@ return {
         {
           id = 22,
           name = "neonpalmtree",
-          class = "",
+          type = "",
           shape = "point",
           x = 40,
           y = 240,
@@ -64,7 +64,7 @@ return {
         {
           id = 23,
           name = "neonpalmtree",
-          class = "",
+          type = "",
           shape = "point",
           x = 400,
           y = 160,
@@ -191,7 +191,7 @@ return {
         {
           id = 2,
           name = "",
-          class = "",
+          type = "",
           shape = "rectangle",
           x = 120,
           y = 120,
@@ -204,7 +204,7 @@ return {
         {
           id = 3,
           name = "",
-          class = "",
+          type = "",
           shape = "rectangle",
           x = 360,
           y = 160,
@@ -217,7 +217,7 @@ return {
         {
           id = 4,
           name = "",
-          class = "",
+          type = "",
           shape = "rectangle",
           x = 1040,
           y = 0,
@@ -230,7 +230,7 @@ return {
         {
           id = 5,
           name = "",
-          class = "",
+          type = "",
           shape = "rectangle",
           x = 1160,
           y = 0,
@@ -243,7 +243,7 @@ return {
         {
           id = 6,
           name = "",
-          class = "",
+          type = "",
           shape = "rectangle",
           x = 360,
           y = 320,
@@ -256,7 +256,7 @@ return {
         {
           id = 7,
           name = "",
-          class = "",
+          type = "",
           shape = "rectangle",
           x = 320,
           y = 360,
@@ -269,7 +269,7 @@ return {
         {
           id = 8,
           name = "",
-          class = "",
+          type = "",
           shape = "rectangle",
           x = 120,
           y = 360,
@@ -282,7 +282,7 @@ return {
         {
           id = 9,
           name = "",
-          class = "",
+          type = "",
           shape = "rectangle",
           x = 80,
           y = 160,
@@ -311,7 +311,7 @@ return {
         {
           id = 27,
           name = "neonpalmtree",
-          class = "",
+          type = "",
           shape = "point",
           x = 1180,
           y = 500,
@@ -342,7 +342,7 @@ return {
         {
           id = 10,
           name = "savepoint",
-          class = "",
+          type = "",
           shape = "point",
           x = 240,
           y = 200,
@@ -358,7 +358,7 @@ return {
         {
           id = 11,
           name = "transition",
-          class = "",
+          type = "",
           shape = "rectangle",
           x = 160,
           y = 480,
@@ -374,7 +374,7 @@ return {
         {
           id = 12,
           name = "transition",
-          class = "",
+          type = "",
           shape = "rectangle",
           x = 1080,
           y = -40,
@@ -390,7 +390,7 @@ return {
         {
           id = 16,
           name = "",
-          class = "",
+          type = "",
           shape = "rectangle",
           x = 480,
           y = 180,
@@ -404,7 +404,7 @@ return {
         {
           id = 17,
           name = "",
-          class = "",
+          type = "",
           shape = "rectangle",
           x = 680,
           y = 180,
@@ -418,7 +418,7 @@ return {
         {
           id = 18,
           name = "",
-          class = "",
+          type = "",
           shape = "rectangle",
           x = 880,
           y = 180,
@@ -448,7 +448,7 @@ return {
         {
           id = 13,
           name = "down",
-          class = "",
+          type = "",
           shape = "point",
           x = 240,
           y = 440,
@@ -461,7 +461,7 @@ return {
         {
           id = 14,
           name = "up",
-          class = "",
+          type = "",
           shape = "point",
           x = 1120,
           y = 80,
@@ -474,7 +474,7 @@ return {
         {
           id = 15,
           name = "spawn",
-          class = "",
+          type = "",
           shape = "point",
           x = 240,
           y = 280,
@@ -503,7 +503,7 @@ return {
         {
           id = 26,
           name = "",
-          class = "",
+          type = "",
           shape = "rectangle",
           x = 400,
           y = 240,
@@ -512,6 +512,37 @@ return {
           rotation = 0,
           visible = true,
           properties = {}
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 10,
+      name = "controllers",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 28,
+          name = "worldshader",
+          type = "",
+          shape = "point",
+          x = 10,
+          y = 20,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["shader"] = "ntsc"
+          }
         }
       }
     }

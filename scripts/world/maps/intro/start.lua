@@ -1,7 +1,7 @@
 return {
-  version = "1.9",
+  version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.9.0",
+  tiledversion = "1.10.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -9,8 +9,8 @@ return {
   height = 12,
   tilewidth = 40,
   tileheight = 40,
-  nextlayerid = 9,
-  nextobjectid = 29,
+  nextlayerid = 10,
+  nextobjectid = 31,
   backgroundcolor = { 14, 0, 29 },
   properties = {
     ["music"] = "resonance_muffled",
@@ -25,7 +25,7 @@ return {
     },
     {
       name = "vapor_objects",
-      firstgid = 101,
+      firstgid = 111,
       filename = "../../tilesets/vapor_objects.tsx",
       exportfilename = "../../tilesets/vapor_objects.lua"
     }
@@ -112,7 +112,7 @@ return {
         {
           id = 1,
           name = "",
-          class = "",
+          type = "",
           shape = "rectangle",
           x = 160,
           y = 200,
@@ -125,7 +125,7 @@ return {
         {
           id = 2,
           name = "",
-          class = "",
+          type = "",
           shape = "rectangle",
           x = 120,
           y = 240,
@@ -138,7 +138,7 @@ return {
         {
           id = 3,
           name = "",
-          class = "",
+          type = "",
           shape = "rectangle",
           x = 160,
           y = 360,
@@ -151,7 +151,7 @@ return {
         {
           id = 4,
           name = "",
-          class = "",
+          type = "",
           shape = "rectangle",
           x = 200,
           y = 400,
@@ -164,7 +164,7 @@ return {
         {
           id = 5,
           name = "",
-          class = "",
+          type = "",
           shape = "rectangle",
           x = 440,
           y = 360,
@@ -177,7 +177,7 @@ return {
         {
           id = 6,
           name = "",
-          class = "",
+          type = "",
           shape = "rectangle",
           x = 480,
           y = 240,
@@ -190,7 +190,7 @@ return {
         {
           id = 7,
           name = "",
-          class = "",
+          type = "",
           shape = "rectangle",
           x = 400,
           y = 200,
@@ -203,7 +203,7 @@ return {
         {
           id = 8,
           name = "",
-          class = "",
+          type = "",
           shape = "rectangle",
           x = 400,
           y = 0,
@@ -216,7 +216,7 @@ return {
         {
           id = 9,
           name = "",
-          class = "",
+          type = "",
           shape = "rectangle",
           x = 200,
           y = 0,
@@ -245,7 +245,7 @@ return {
         {
           id = 10,
           name = "transition",
-          class = "",
+          type = "",
           shape = "rectangle",
           x = 240,
           y = -40,
@@ -261,63 +261,63 @@ return {
         {
           id = 21,
           name = "",
-          class = "",
+          type = "",
           shape = "rectangle",
           x = 40,
           y = 200,
           width = 80,
           height = 144,
           rotation = 0,
-          gid = 102,
+          gid = 112,
           visible = true,
           properties = {}
         },
         {
           id = 22,
           name = "",
-          class = "",
+          type = "",
           shape = "rectangle",
           x = 520,
           y = 200,
           width = 80,
           height = 144,
           rotation = 0,
-          gid = 102,
+          gid = 112,
           visible = true,
           properties = {}
         },
         {
           id = 25,
           name = "",
-          class = "",
+          type = "",
           shape = "rectangle",
           x = 40,
           y = 480,
           width = 80,
           height = 144,
           rotation = 0,
-          gid = 102,
+          gid = 112,
           visible = true,
           properties = {}
         },
         {
           id = 26,
           name = "",
-          class = "",
+          type = "",
           shape = "rectangle",
           x = 520,
           y = 480,
           width = 80,
           height = 144,
           rotation = 0,
-          gid = 102,
+          gid = 112,
           visible = true,
           properties = {}
         },
         {
           id = 27,
           name = "neonpalmtree",
-          class = "",
+          type = "",
           shape = "point",
           x = 220,
           y = 240,
@@ -332,7 +332,7 @@ return {
         {
           id = 28,
           name = "neonpalmtree",
-          class = "",
+          type = "",
           shape = "point",
           x = 420,
           y = 240,
@@ -363,7 +363,7 @@ return {
         {
           id = 11,
           name = "up",
-          class = "",
+          type = "",
           shape = "point",
           x = 320,
           y = 80,
@@ -376,7 +376,7 @@ return {
         {
           id = 12,
           name = "spawn",
-          class = "",
+          type = "",
           shape = "point",
           x = 320,
           y = 320,
@@ -418,6 +418,37 @@ return {
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 10, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 10, 0
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 9,
+      name = "controllers",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 30,
+          name = "worldshader",
+          type = "",
+          shape = "point",
+          x = 10,
+          y = 20,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["shader"] = "ntsc"
+          }
+        }
       }
     }
   }
