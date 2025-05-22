@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="16" height="28" tilewidth="40" tileheight="40" infinite="0" backgroundcolor="#0e001d" nextlayerid="5" nextobjectid="22">
+ <editorsettings>
+  <export target="crossroads.lua" format="lua"/>
+ </editorsettings>
+ <properties>
+  <property name="music" value="resonance_muffled"/>
+  <property name="use_footstep_sounds" type="bool" value="true"/>
+ </properties>
+ <tileset firstgid="1" source="../../tilesets/vapor.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="16" height="28">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+51,51,51,52,0,0,0,0,0,0,0,0,56,57,57,57,
+61,61,61,62,63,0,0,0,0,0,0,65,66,67,67,67,
+71,71,71,72,73,63,0,0,0,0,65,75,76,77,77,77,
+81,81,81,82,83,73,74,74,74,74,75,85,86,87,87,87,
+91,91,91,92,93,83,2,2,2,2,85,95,96,97,97,97,
+101,101,101,102,103,93,94,94,94,94,95,105,106,107,107,107,
+35,35,35,35,102,103,22,12,12,22,105,35,35,35,35,35,
+35,35,35,35,35,102,17,12,12,18,106,35,35,35,35,35,
+45,45,45,45,45,45,37,12,12,38,45,45,45,45,45,45,
+0,0,0,0,0,0,14,12,12,16,0,0,0,0,0,0,
+0,0,0,0,0,0,14,12,12,16,0,0,0,0,0,0,
+0,0,0,0,0,0,14,12,12,8,5,5,6,0,0,0,
+0,0,0,0,0,0,14,12,12,2,2,2,16,0,0,0,
+0,0,0,0,0,0,14,12,12,22,22,22,16,0,0,0,
+0,0,0,0,0,0,14,12,12,18,25,25,26,0,0,0,
+0,0,0,4,5,5,7,12,12,38,45,45,46,0,0,0,
+0,0,0,14,2,2,2,12,12,16,0,0,0,0,0,0,
+0,0,0,14,22,22,22,12,12,16,0,0,0,0,0,0,
+0,0,0,24,25,25,17,12,12,16,0,0,0,0,0,0,
+0,0,0,44,45,45,37,12,12,16,0,0,0,0,0,0,
+0,0,0,0,0,0,14,12,12,16,0,0,0,0,0,0,
+0,0,0,0,0,0,14,12,12,16,0,0,0,0,0,0,
+0,0,0,0,0,0,14,12,12,16,0,0,0,0,0,0,
+0,0,0,0,0,0,14,12,12,16,0,0,0,0,0,0,
+0,0,0,0,0,0,14,12,12,16,0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup color="#0000ff" id="2" name="collision">
+  <object id="1" x="160" y="840" width="120" height="280"/>
+  <object id="2" x="360" y="680" width="120" height="440"/>
+  <object id="3" x="360" y="400" width="120" height="200"/>
+  <object id="4" x="480" y="600" width="40" height="80"/>
+  <object id="5" x="120" y="760" width="40" height="80"/>
+  <object id="6" x="160" y="400" width="120" height="360"/>
+  <object id="7" x="0" y="280" width="120" height="120"/>
+  <object id="8" x="520" y="280" width="120" height="120"/>
+  <object id="9" x="520" y="120" width="120" height="40"/>
+  <object id="10" x="0" y="120" width="120" height="40"/>
+  <object id="11" x="240" y="240" width="160" height="40"/>
+  <object id="12" x="240" y="400">
+   <polygon points="0,0 -120,-120 -120,0"/>
+  </object>
+  <object id="13" x="400" y="400">
+   <polygon points="0,0 120,-120 120,0"/>
+  </object>
+  <object id="18" x="240" y="280">
+   <polygon points="0,0 -120,-120 0,-120"/>
+  </object>
+  <object id="19" x="400" y="280">
+   <polygon points="0,0 120,-120 0,-120"/>
+  </object>
+ </objectgroup>
+ <objectgroup color="#ff00ff" id="3" name="objects">
+  <object id="14" name="transition" x="-40" y="160" width="40" height="120">
+   <properties>
+    <property name="map" value="intro/item_1"/>
+    <property name="marker" value="right"/>
+   </properties>
+  </object>
+  <object id="15" name="transition" x="640" y="160" width="40" height="120">
+   <properties>
+    <property name="map" value="intro/slides_1"/>
+    <property name="marker" value="left"/>
+   </properties>
+  </object>
+  <object id="16" name="transition" x="280" y="1120" width="80" height="40">
+   <properties>
+    <property name="map" value="intro/pillars_1"/>
+    <property name="marker" value="up"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup color="#7f00ff" id="4" name="markers">
+  <object id="17" name="down" x="320" y="1080">
+   <point/>
+  </object>
+  <object id="20" name="left" x="40" y="240">
+   <point/>
+  </object>
+  <object id="21" name="right" x="600" y="240">
+   <point/>
+  </object>
+ </objectgroup>
+</map>

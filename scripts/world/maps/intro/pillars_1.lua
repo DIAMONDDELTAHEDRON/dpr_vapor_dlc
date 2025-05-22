@@ -26,7 +26,7 @@ return {
     },
     {
       name = "vapor_objects",
-      firstgid = 101,
+      firstgid = 111,
       filename = "../../tilesets/vapor_objects.tsx",
       exportfilename = "../../tilesets/vapor_objects.lua"
     }
@@ -382,7 +382,10 @@ return {
           height = 40,
           rotation = 0,
           visible = true,
-          properties = {}
+          properties = {
+            ["map"] = "intro/crossroads",
+            ["marker"] = "down"
+          }
         },
         {
           id = 16,
@@ -394,7 +397,7 @@ return {
           width = 80,
           height = 144,
           rotation = 0,
-          gid = 102,
+          gid = 112,
           visible = true,
           properties = {}
         },
@@ -408,7 +411,7 @@ return {
           width = 80,
           height = 144,
           rotation = 0,
-          gid = 102,
+          gid = 112,
           visible = true,
           properties = {}
         },
@@ -422,7 +425,7 @@ return {
           width = 80,
           height = 144,
           rotation = 0,
-          gid = 102,
+          gid = 112,
           visible = true,
           properties = {}
         }

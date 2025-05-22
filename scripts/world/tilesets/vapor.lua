@@ -11,7 +11,7 @@ return {
   columns = 10,
   image = "../../../assets/sprites/tilesets/vapor.png",
   imagewidth = 200,
-  imageheight = 100,
+  imageheight = 220,
   objectalignment = "unspecified",
   tilerendersize = "grid",
   fillmode = "stretch",
@@ -26,6 +26,6 @@ return {
   },
   properties = {},
   wangsets = {},
-  tilecount = 50,
+  tilecount = 110,
   tiles = {}
 }

@@ -9,7 +9,7 @@
   <property name="use_footstep_sounds" type="bool" value="true"/>
  </properties>
  <tileset firstgid="1" source="../../tilesets/vapor.tsx"/>
- <tileset firstgid="101" source="../../tilesets/vapor_objects.tsx"/>
+ <tileset firstgid="111" source="../../tilesets/vapor_objects.tsx"/>
  <objectgroup id="7" name="objects_trees">
   <object id="22" name="neonpalmtree" x="40" y="240">
    <properties>
@@ -105,10 +105,15 @@ shines within you.)</property>
     <property name="marker" value="up"/>
    </properties>
   </object>
-  <object id="12" name="transition" x="1080" y="-40" width="80" height="40"/>
-  <object id="16" gid="102" x="480" y="180" width="80" height="144"/>
-  <object id="17" gid="102" x="680" y="180" width="80" height="144"/>
-  <object id="18" gid="102" x="880" y="180" width="80" height="144"/>
+  <object id="12" name="transition" x="1080" y="-40" width="80" height="40">
+   <properties>
+    <property name="map" value="intro/crossroads"/>
+    <property name="marker" value="down"/>
+   </properties>
+  </object>
+  <object id="16" gid="112" x="480" y="180" width="80" height="144"/>
+  <object id="17" gid="112" x="680" y="180" width="80" height="144"/>
+  <object id="18" gid="112" x="880" y="180" width="80" height="144"/>
  </objectgroup>
  <objectgroup color="#7f00ff" id="5" name="markers">
   <object id="13" name="down" x="240" y="440">
