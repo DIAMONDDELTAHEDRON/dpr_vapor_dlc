@@ -1,7 +1,7 @@
 return {
-  version = "1.9",
+  version = "1.10",
   luaversion = "5.1",
-  tiledversion = "1.9.0",
+  tiledversion = "1.10.2",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -9,8 +9,8 @@ return {
   height = 28,
   tilewidth = 40,
   tileheight = 40,
-  nextlayerid = 5,
-  nextobjectid = 22,
+  nextlayerid = 7,
+  nextobjectid = 23,
   backgroundcolor = { 14, 0, 29 },
   properties = {
     ["music"] = "resonance_muffled",
@@ -90,7 +90,7 @@ return {
         {
           id = 1,
           name = "",
-          class = "",
+          type = "",
           shape = "rectangle",
           x = 160,
           y = 840,
@@ -103,7 +103,7 @@ return {
         {
           id = 2,
           name = "",
-          class = "",
+          type = "",
           shape = "rectangle",
           x = 360,
           y = 680,
@@ -116,7 +116,7 @@ return {
         {
           id = 3,
           name = "",
-          class = "",
+          type = "",
           shape = "rectangle",
           x = 360,
           y = 400,
@@ -129,7 +129,7 @@ return {
         {
           id = 4,
           name = "",
-          class = "",
+          type = "",
           shape = "rectangle",
           x = 480,
           y = 600,
@@ -142,7 +142,7 @@ return {
         {
           id = 5,
           name = "",
-          class = "",
+          type = "",
           shape = "rectangle",
           x = 120,
           y = 760,
@@ -155,7 +155,7 @@ return {
         {
           id = 6,
           name = "",
-          class = "",
+          type = "",
           shape = "rectangle",
           x = 160,
           y = 400,
@@ -168,7 +168,7 @@ return {
         {
           id = 7,
           name = "",
-          class = "",
+          type = "",
           shape = "rectangle",
           x = 0,
           y = 280,
@@ -181,7 +181,7 @@ return {
         {
           id = 8,
           name = "",
-          class = "",
+          type = "",
           shape = "rectangle",
           x = 520,
           y = 280,
@@ -194,7 +194,7 @@ return {
         {
           id = 9,
           name = "",
-          class = "",
+          type = "",
           shape = "rectangle",
           x = 520,
           y = 120,
@@ -207,7 +207,7 @@ return {
         {
           id = 10,
           name = "",
-          class = "",
+          type = "",
           shape = "rectangle",
           x = 0,
           y = 120,
@@ -220,7 +220,7 @@ return {
         {
           id = 11,
           name = "",
-          class = "",
+          type = "",
           shape = "rectangle",
           x = 240,
           y = 240,
@@ -233,7 +233,7 @@ return {
         {
           id = 12,
           name = "",
-          class = "",
+          type = "",
           shape = "polygon",
           x = 240,
           y = 400,
@@ -251,7 +251,7 @@ return {
         {
           id = 13,
           name = "",
-          class = "",
+          type = "",
           shape = "polygon",
           x = 400,
           y = 400,
@@ -269,7 +269,7 @@ return {
         {
           id = 18,
           name = "",
-          class = "",
+          type = "",
           shape = "polygon",
           x = 240,
           y = 280,
@@ -287,7 +287,7 @@ return {
         {
           id = 19,
           name = "",
-          class = "",
+          type = "",
           shape = "polygon",
           x = 400,
           y = 280,
@@ -321,7 +321,7 @@ return {
         {
           id = 14,
           name = "transition",
-          class = "",
+          type = "",
           shape = "rectangle",
           x = -40,
           y = 160,
@@ -337,7 +337,7 @@ return {
         {
           id = 15,
           name = "transition",
-          class = "",
+          type = "",
           shape = "rectangle",
           x = 640,
           y = 160,
@@ -353,7 +353,7 @@ return {
         {
           id = 16,
           name = "transition",
-          class = "",
+          type = "",
           shape = "rectangle",
           x = 280,
           y = 1120,
@@ -385,7 +385,7 @@ return {
         {
           id = 17,
           name = "down",
-          class = "",
+          type = "",
           shape = "point",
           x = 320,
           y = 1080,
@@ -398,7 +398,7 @@ return {
         {
           id = 20,
           name = "left",
-          class = "",
+          type = "",
           shape = "point",
           x = 40,
           y = 240,
@@ -411,7 +411,7 @@ return {
         {
           id = 21,
           name = "right",
-          class = "",
+          type = "",
           shape = "point",
           x = 600,
           y = 240,
@@ -420,6 +420,37 @@ return {
           rotation = 0,
           visible = true,
           properties = {}
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 6,
+      name = "controllers",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 22,
+          name = "worldshader",
+          type = "",
+          shape = "point",
+          x = 10,
+          y = 20,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          visible = true,
+          properties = {
+            ["shader"] = "ntsc"
+          }
         }
       }
     }
