@@ -19,6 +19,7 @@ function WorldShader:init(data,...)
     class_lists.default = class_lists.everything
     self.classes = class_lists[data.properties.class_set or "default"]
     self.shaded = {}
+	self.noisefx = nil
 end
 
 function WorldShader:onMapDone()
@@ -38,6 +39,8 @@ function WorldShader:onMapDone()
             table.insert(self.shaded, value)
         end
     end
+	self.noisefx = NoiseFX()
+	Game.world:addChild(self.noisefx)
     self.done = true
 end
 
@@ -57,6 +60,9 @@ function WorldShader:onRemove(parent)
     for index, value in ipairs(self.shaded) do
         value:removeFX("worldshader_added")
     end
+	if self.noisefx then
+		self.noisefx:remove()
+	end
 end
 local function sin01(x)
     return (math.sin(x) + 1)/2
