@@ -28,11 +28,11 @@ function NoiseFX:update()
 end
 
 function NoiseFX:draw()
-	love.graphics.setBlendMode("add")
+    love.graphics.setBlendMode("add")
     Draw.draw(self.noise_overlay, 0, 0, 0, 1, 1)
-	love.graphics.setBlendMode("alpha")
-	
-	super.draw(self)
+    love.graphics.setBlendMode("alpha")
+    
+    super.draw(self)
 end
 
 return NoiseFX
