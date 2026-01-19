@@ -29,7 +29,7 @@ function WorldShader:onMapDone()
     for keya, class_a in ipairs(self.classes) do
         for keyb, class_b in ipairs(self.classes) do
             assert(keya == keyb or not class_a:includes(class_b), string.format(
-                "%s is listed even though it includes %s", Utils.dump(class_a), Utils.dump(class_b)
+                "%s is listed even though it includes %s", TableUtils.dump(class_a), TableUtils.dump(class_b)
             ))
         end
     end
@@ -77,12 +77,12 @@ function WorldShader:fullDraw()
             local max_health = party:getStat("health")
             party_hp_status = party_hp_status + (current_health/max_health)
         end
-        party_hp_status = Utils.clamp(1 - party_hp_status / #Game.party, 0, 1)
+        party_hp_status = MathUtils.clamp(1 - party_hp_status / #Game.party, 0, 1)
     end
     for key, value in pairs({
         time = Kristal.getTime(),
         degradation = party_hp_status,
-        random = Utils.random(0.0, 1.0),
+        random = MathUtils.random(0.0, 1.0),
         grain_tex = Assets.getTexture("shaders/ntsc_grain"),
         lines_tex = Assets.getTexture("shaders/ntsc_lines")
     }) do
