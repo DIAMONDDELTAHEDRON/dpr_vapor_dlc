@@ -21,7 +21,7 @@ function NeonPalmTree:update()
     super.update(self)
 	
     self.neonsiner = self.neonsiner + DTMULT
-    self.neoncolor = Utils.mergeColor(COLORS.aqua, COLORS.fuchsia , (0.25 + math.sin(self.neonsiner / 10)) * 2)
+    self.neoncolor = ColorUtils.mergeColor(COLORS.aqua, COLORS.fuchsia, MathUtils.clamp((0.25 + math.sin(self.neonsiner / 10)) * 2, 0, 1))
 	
     self.sprite:setColor(self.neoncolor)
 end
