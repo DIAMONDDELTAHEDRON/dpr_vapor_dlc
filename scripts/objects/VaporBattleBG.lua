@@ -14,7 +14,7 @@ function VaporBattleBG:init()
 end
 
 function VaporBattleBG:update()
-    super.update(self)
+    super.super.update(self)
 	self.offset = self.offset + self.speed*DTMULT
 
     if self.offset >= 200 then
