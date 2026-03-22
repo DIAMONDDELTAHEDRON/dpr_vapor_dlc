@@ -7,16 +7,17 @@ function Dummy:init()
     self.text = "* The tutorial begins...?"
 
     self.music = "battlefor"
-    self.background = false
+    self.background = true
 	self.hide_world = true
 
     -- Add the dummy enemy to the encounter
     self:addEnemy("dummy")
 end
 
-function Dummy:onBattleInit()
-    self.bg = VaporBattleBG()
-    Game.battle:addChild(self.bg)
+function Dummy:createBackground()
+    if self.background then
+        return Game.battle:addChild(VaporBattleBG())
+    end
 end
 
 function Dummy:onReturnToWorld(events)

@@ -1,12 +1,11 @@
-local VaporBattleBG, super = Class(Object)
+local VaporBattleBG, super = Class(BattleBackground)
 
 function VaporBattleBG:init()
     super.init(self)
 
-	self.offset = 0
+	self.voffset = 0
 	self.offset_2 = 0
 	self.city_offset = 0
-    self.fade = 0
     self.speed = 2
 	self.layer = BATTLE_LAYERS["bottom"]
 	self.shader = Assets.getShader("ntsc")
@@ -16,14 +15,13 @@ end
 
 function VaporBattleBG:update()
     super.update(self)
-    self.fade = Game.battle.transition_timer / 10
-	self.offset = self.offset + self.speed*DTMULT
+	self.voffset = self.voffset + self.speed*DTMULT
 
-    if self.offset >= 200 then
-        self.offset = self.offset - 200
+    if self.voffset >= 200 then
+        self.voffset = self.voffset - 200
     end
-    if self.offset < 0 then
-        self.offset = self.offset + 200
+    if self.voffset < 0 then
+        self.voffset = self.voffset + 200
     end
 	self.offset_2 = self.offset_2 - (self.speed/2)*DTMULT
 
@@ -85,10 +83,10 @@ function VaporBattleBG:draw()
 			love.graphics.line(MathUtils.lerp(topx, botx, topval), MathUtils.lerp(topy, boty, topval), MathUtils.lerp(topx, botx, botval), MathUtils.lerp(topy, boty, botval))
 			love.graphics.line(MathUtils.lerp(topx, botx, topval), MathUtils.lerp(topy, boty, topval), MathUtils.lerp(topx2, botx2, topval), MathUtils.lerp(topy, boty, topval))
 		end
-		topx = 314 + (((j * xsep) + self.offset) * 0.5)
-		botx = 314 + ((j * xsep) + self.offset)
-		topx2 = 314 + ((((j + 1) * xsep) + self.offset) * 0.5)
-		botx2 = 314 + (((j + 1) * xsep) + self.offset)
+		topx = 314 + (((j * xsep) + self.voffset) * 0.5)
+		botx = 314 + ((j * xsep) + self.voffset)
+		topx2 = 314 + ((((j + 1) * xsep) + self.voffset) * 0.5)
+		botx2 = 314 + (((j + 1) * xsep) + self.voffset)
 		topy = 100
 		boty = SCREEN_HEIGHT
 		for i = 0, imax do
@@ -107,12 +105,10 @@ function VaporBattleBG:draw()
     love.graphics.rectangle("fill", -20, -20, SCREEN_WIDTH + 40, 105 - 50)
 	Draw.setColor(ColorUtils.mergeColor(COLORS.aqua, COLORS.fuchsia, MathUtils.clamp((0.25 + math.sin(self.neonsiner / 10)) * 2, 0, 1)))
 	Draw.drawWrapped(self.city_tex, true, false, self.city_offset, 105 - 50)
-	Draw.setColor(0, 0, 0, Game.battle.background_fade_alpha)
-    love.graphics.rectangle("fill", -20, -20, SCREEN_WIDTH + 40, SCREEN_HEIGHT + 40)
 	Draw.popCanvas()
 	local last_shader = love.graphics.getShader()
 	love.graphics.setShader(self.shader)
-    love.graphics.setColor(1,1,1,self.fade)
+    love.graphics.setColor(1,1,1,self.alpha)
 	Draw.draw(bg_canvas)
     love.graphics.setColor(1,1,1,1)
 	love.graphics.setShader(last_shader)

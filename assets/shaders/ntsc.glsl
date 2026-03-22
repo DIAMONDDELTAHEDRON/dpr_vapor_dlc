@@ -97,15 +97,15 @@ vec4 effect(vec4 color, Image texture, vec2 texture_coords, vec2 pixel_coords){
     float d = 0.1 * 1.0 / 50.0;
 	vec2 uv = texture_coords;
 
-    float s = 0.5+(random/16)+((degradation/3)*random)/4;
-    float t = (Texel(lines_tex, vec2(uv.x, (uv.y/2)+(random/2))).r * (degradation/4));
+    float s = 0.5+(random/16.0)+((degradation/3.0)*random)/4.0;
+    float t = (Texel(lines_tex, vec2(uv.x, (uv.y/2.0)+(random/2.0))).r * (degradation/4.0));
     float u = Texel(grain_tex,vec2(0.01+(uv.y*32.0)/32.0,mod(time * 10.0, mod(time * 10.0, 256.0) * (1.0 / 256.0)))).r;
    
     float e = min(0.30, pow(max(0.0, cos((1.0 - uv.y) * 4.0 + 0.3) - 0.75) * (s + 0.5) * 1.0, 3.0)) * 25.0;
-	s-=pow(0.5+(random/16)+((degradation/3)*random)/4,1.0);
-	uv.x += (0.015*degradation/3)-abs(u * 0.03*(degradation/3));
-    float r = Texel(grain_tex, vec2(mod(time * 10.0, mod(time * 10.0, 256.0) * (1.0 / 256.0)), 0.0)).r * (2.0 * ((degradation/3)*random));
-    uv.x += abs(r * pow(max(0.003, (uv.y - 0.95) + (u*0.5*degradation/3)) * 2.0, 2.0));
+	s-=pow(0.5+(random/16.0)+((degradation/3.0)*random)/4.0,1.0);
+	uv.x += (0.015*degradation/3.0)-abs(u * 0.03*(degradation/3.0));
+    float r = Texel(grain_tex, vec2(mod(time * 10.0, mod(time * 10.0, 256.0) * (1.0 / 256.0)), 0.0)).r * (2.0 * ((degradation/3.0)*random));
+    uv.x += abs(r * pow(max(0.003, (uv.y - 0.95) + (u*0.5*degradation/3.0)) * 2.0, 2.0));
     
     d = 0.051 + abs(sin(s / 4.0));
     float c = max(0.0001, 0.002 * d);
@@ -125,7 +125,7 @@ vec4 effect(vec4 color, Image texture, vec2 texture_coords, vec2 pixel_coords){
     
     color.xyz = yiq2rgb(vec3(y, i, q)) - pow(s + e * 2.0, 3.0);
 	color.xyz = rgb2hsv(color.xyz);
-	color.y += degradation/4;
+	color.y += degradation/4.0;
 	color.xyz = hsv2rgb(color.xyz);
     color.xyz = mix(color.xyz, vec3(dot(color.xyz, vec3(.5, .5, .5))), t);
     color.xyz *= smoothstep(1.0, 0.999, uv.x - 0.1);
