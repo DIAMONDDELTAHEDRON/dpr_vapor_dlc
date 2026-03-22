@@ -3,7 +3,7 @@ local VaporBattleBG, super = Class(BattleBackground)
 function VaporBattleBG:init()
     super.init(self)
 
-	self.offset = 0
+	self.voffset = 0
 	self.offset_2 = 0
 	self.city_offset = 0
     self.speed = 2
@@ -14,14 +14,14 @@ function VaporBattleBG:init()
 end
 
 function VaporBattleBG:update()
-    super.super.update(self)
-	self.offset = self.offset + self.speed*DTMULT
+    super.update(self)
+	self.voffset = self.voffset + self.speed*DTMULT
 
-    if self.offset >= 200 then
-        self.offset = self.offset - 200
+    if self.voffset >= 200 then
+        self.voffset = self.voffset - 200
     end
-    if self.offset < 0 then
-        self.offset = self.offset + 200
+    if self.voffset < 0 then
+        self.voffset = self.voffset + 200
     end
 	self.offset_2 = self.offset_2 - (self.speed/2)*DTMULT
 
@@ -83,10 +83,10 @@ function VaporBattleBG:draw()
 			love.graphics.line(MathUtils.lerp(topx, botx, topval), MathUtils.lerp(topy, boty, topval), MathUtils.lerp(topx, botx, botval), MathUtils.lerp(topy, boty, botval))
 			love.graphics.line(MathUtils.lerp(topx, botx, topval), MathUtils.lerp(topy, boty, topval), MathUtils.lerp(topx2, botx2, topval), MathUtils.lerp(topy, boty, topval))
 		end
-		topx = 314 + (((j * xsep) + self.offset) * 0.5)
-		botx = 314 + ((j * xsep) + self.offset)
-		topx2 = 314 + ((((j + 1) * xsep) + self.offset) * 0.5)
-		botx2 = 314 + (((j + 1) * xsep) + self.offset)
+		topx = 314 + (((j * xsep) + self.voffset) * 0.5)
+		botx = 314 + ((j * xsep) + self.voffset)
+		topx2 = 314 + ((((j + 1) * xsep) + self.voffset) * 0.5)
+		botx2 = 314 + (((j + 1) * xsep) + self.voffset)
 		topy = 100
 		boty = SCREEN_HEIGHT
 		for i = 0, imax do
