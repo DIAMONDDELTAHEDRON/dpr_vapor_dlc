@@ -1,7 +1,7 @@
 return {
-  version = "1.10",
+  version = "1.11",
   luaversion = "5.1",
-  tiledversion = "1.10.2",
+  tiledversion = "1.12.1",
   class = "",
   orientation = "orthogonal",
   renderorder = "right-down",
@@ -9,8 +9,8 @@ return {
   height = 12,
   tilewidth = 40,
   tileheight = 40,
-  nextlayerid = 11,
-  nextobjectid = 29,
+  nextlayerid = 16,
+  nextobjectid = 38,
   backgroundcolor = { 14, 0, 29 },
   properties = {
     ["music"] = "resonance_muffled",
@@ -26,9 +26,14 @@ return {
     },
     {
       name = "vapor_objects",
-      firstgid = 111,
+      firstgid = 211,
       filename = "../../tilesets/vapor_objects.tsx",
       exportfilename = "../../tilesets/vapor_objects.lua"
+    },
+    {
+      name = "vapor_battle",
+      firstgid = 213,
+      filename = "../../tilesets/vapor_battle.tsx"
     }
   },
   layers = {
@@ -56,6 +61,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["angle"] = "10"
@@ -71,6 +77,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["angle"] = "-15"
@@ -130,13 +137,13 @@ return {
       data = {
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 5, 5, 6, 0, 4, 5, 5, 6, 0, 4, 5, 5, 6, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 14, 1, 3, 16, 0, 14, 1, 3, 16, 0, 14, 1, 3, 16, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 14, 21, 23, 16, 0, 14, 21, 23, 16, 0, 14, 21, 23, 16, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 24, 25, 25, 26, 0, 24, 25, 25, 26, 0, 24, 25, 25, 26, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 5, 5, 6, 0, 0, 0, 0, 0, 0, 4, 5, 5, 6, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 14, 1, 3, 16, 0, 0, 0, 0, 0, 0, 14, 1, 3, 16, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 14, 21, 23, 16, 0, 0, 0, 0, 0, 0, 14, 21, 23, 16, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 24, 25, 25, 26, 0, 4, 5, 5, 6, 0, 24, 25, 25, 26, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 14, 1, 3, 16, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 14, 21, 23, 16, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 24, 25, 25, 26, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
@@ -165,13 +172,45 @@ return {
         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 14, 11, 13, 16, 0, 0,
         0, 0, 4, 5, 5, 5, 5, 5, 5, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 14, 11, 13, 16, 0, 0,
         0, 0, 14, 1, 2, 2, 2, 2, 3, 16, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 14, 11, 13, 16, 0, 0,
-        0, 0, 14, 11, 12, 12, 12, 12, 13, 8, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 7, 11, 13, 16, 0, 0,
-        0, 0, 14, 11, 12, 12, 12, 12, 12, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 12, 13, 16, 0, 0,
-        0, 0, 14, 11, 12, 12, 12, 12, 12, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 22, 23, 16, 0, 0,
-        0, 0, 14, 21, 12, 12, 12, 12, 23, 18, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 26, 0, 0,
-        0, 0, 24, 17, 31, 31, 31, 31, 18, 48, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 45, 46, 0, 0,
-        0, 0, 34, 27, 31, 31, 31, 31, 28, 36, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 44, 37, 31, 31, 31, 31, 38, 46, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+        0, 0, 14, 11, 12, 12, 12, 12, 13, 8, 5, 5, 5, 5, 5, 6, 0, 0, 0, 0, 4, 5, 5, 5, 5, 5, 7, 11, 13, 16, 0, 0,
+        0, 0, 14, 11, 12, 12, 12, 12, 12, 2, 2, 2, 2, 2, 2, 16, 0, 0, 0, 0, 14, 1, 2, 2, 2, 2, 2, 12, 13, 16, 0, 0,
+        0, 0, 14, 11, 12, 12, 12, 12, 12, 22, 22, 22, 22, 22, 22, 16, 0, 0, 0, 0, 14, 11, 22, 22, 22, 22, 22, 22, 23, 16, 0, 0,
+        0, 0, 14, 21, 12, 12, 12, 12, 23, 18, 25, 25, 17, 11, 22, 8, 5, 5, 5, 5, 7, 11, 13, 18, 25, 25, 25, 25, 25, 26, 0, 0,
+        0, 0, 24, 17, 31, 31, 31, 31, 18, 48, 45, 45, 37, 11, 22, 12, 12, 12, 12, 12, 12, 12, 13, 38, 45, 45, 45, 45, 45, 46, 0, 0,
+        0, 0, 34, 27, 31, 31, 31, 31, 28, 36, 0, 0, 14, 21, 22, 22, 22, 22, 22, 22, 22, 12, 23, 16, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 44, 37, 31, 31, 31, 31, 38, 46, 0, 0, 24, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 26, 0, 0, 0, 0, 0, 0, 0, 0
+      }
+    },
+    {
+      type = "tilelayer",
+      x = 0,
+      y = 0,
+      width = 32,
+      height = 12,
+      id = 15,
+      name = "battleborder",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      encoding = "lua",
+      data = {
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 226, 0, 0, 228, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 226, 0, 0, 228, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 226, 0, 0, 228, 0, 0,
+        0, 0, 216, 217, 217, 217, 217, 217, 217, 218, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 226, 0, 0, 228, 0, 0,
+        0, 0, 226, 0, 0, 0, 0, 0, 0, 228, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 226, 0, 0, 228, 0, 0,
+        0, 0, 226, 0, 0, 0, 0, 0, 0, 220, 217, 217, 217, 217, 217, 218, 0, 0, 0, 0, 216, 217, 217, 217, 217, 217, 219, 0, 0, 228, 0, 0,
+        0, 0, 226, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 228, 0, 0, 0, 0, 226, 0, 0, 0, 0, 0, 0, 0, 0, 228, 0, 0,
+        0, 0, 226, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 228, 0, 0, 0, 0, 226, 0, 0, 0, 0, 0, 0, 0, 0, 228, 0, 0,
+        0, 0, 226, 0, 0, 0, 0, 0, 0, 230, 237, 237, 229, 0, 0, 220, 217, 217, 217, 217, 219, 0, 0, 230, 237, 237, 237, 237, 237, 238, 0, 0,
+        0, 0, 236, 229, 243, 243, 243, 243, 230, 238, 0, 0, 226, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 228, 0, 0, 0, 0, 0, 258, 0, 0,
+        0, 0, 246, 239, 243, 243, 243, 243, 240, 248, 0, 0, 226, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 228, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 256, 249, 243, 243, 243, 243, 250, 258, 0, 0, 236, 237, 237, 237, 237, 237, 237, 237, 237, 237, 237, 238, 0, 0, 0, 0, 0, 0, 0, 0
       }
     },
     {
@@ -198,6 +237,7 @@ return {
           width = 240,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -211,6 +251,7 @@ return {
           width = 720,
           height = 80,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -224,6 +265,7 @@ return {
           width = 40,
           height = 160,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -237,6 +279,7 @@ return {
           width = 40,
           height = 320,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -247,9 +290,10 @@ return {
           shape = "rectangle",
           x = 360,
           y = 320,
-          width = 800,
+          width = 160,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -263,6 +307,7 @@ return {
           width = 40,
           height = 120,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -276,6 +321,7 @@ return {
           width = 40,
           height = 120,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -289,6 +335,77 @@ return {
           width = 40,
           height = 200,
           rotation = 0,
+          opacity = 1,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 32,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 520,
+          y = 440,
+          width = 400,
+          height = 40,
+          rotation = 0,
+          opacity = 1,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 34,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 920,
+          y = 320,
+          width = 280,
+          height = 40,
+          rotation = 0,
+          opacity = 1,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 35,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 920,
+          y = 360,
+          width = 40,
+          height = 120,
+          rotation = 0,
+          opacity = 1,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 36,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 480,
+          y = 360,
+          width = 40,
+          height = 120,
+          rotation = 0,
+          opacity = 1,
+          visible = true,
+          properties = {}
+        },
+        {
+          id = 37,
+          name = "",
+          type = "",
+          shape = "rectangle",
+          x = 600,
+          y = 240,
+          width = 240,
+          height = 120,
+          rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         }
@@ -318,6 +435,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["angle"] = "5"
@@ -329,7 +447,7 @@ return {
       type = "objectgroup",
       draworder = "topdown",
       id = 4,
-      name = "objects",
+      name = "objects_party",
       class = "",
       visible = true,
       opacity = 1,
@@ -349,6 +467,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["text1"] = "* (Palm trees flash in hues of teal and pink,[wait:5] glistening on the tiled floors...)",
@@ -365,6 +484,7 @@ return {
           width = 160,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["map"] = "intro/start",
@@ -381,6 +501,7 @@ return {
           width = 80,
           height = 40,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["map"] = "intro/crossroads",
@@ -397,7 +518,8 @@ return {
           width = 80,
           height = 144,
           rotation = 0,
-          gid = 112,
+          opacity = 1,
+          gid = 212,
           visible = true,
           properties = {}
         },
@@ -407,11 +529,12 @@ return {
           type = "",
           shape = "rectangle",
           x = 680,
-          y = 180,
+          y = 300,
           width = 80,
           height = 144,
           rotation = 0,
-          gid = 112,
+          opacity = 1,
+          gid = 212,
           visible = true,
           properties = {}
         },
@@ -425,9 +548,83 @@ return {
           width = 80,
           height = 144,
           rotation = 0,
-          gid = 112,
+          opacity = 1,
+          gid = 212,
           visible = true,
           properties = {}
+        }
+      }
+    },
+    {
+      type = "objectgroup",
+      draworder = "topdown",
+      id = 12,
+      name = "objects_eyes",
+      class = "",
+      visible = true,
+      opacity = 1,
+      offsetx = 0,
+      offsety = 0,
+      parallaxx = 1,
+      parallaxy = 1,
+      properties = {},
+      objects = {
+        {
+          id = 29,
+          name = "pillar_eyeball",
+          type = "",
+          shape = "point",
+          x = 520,
+          y = 50,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          opacity = 1,
+          visible = true,
+          properties = {
+            ["attackmode"] = "tracking_sweep",
+            ["maxtime"] = 90,
+            ["starttime"] = 70,
+            ["sweepangle"] = 22.5
+          }
+        },
+        {
+          id = 30,
+          name = "pillar_eyeball",
+          type = "",
+          shape = "point",
+          x = 720,
+          y = 170,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          opacity = 1,
+          visible = true,
+          properties = {
+            ["attackmode"] = "tracking_sweep",
+            ["maxtime"] = 90,
+            ["starttime"] = 50,
+            ["sweepangle"] = 22.5
+          }
+        },
+        {
+          id = 31,
+          name = "pillar_eyeball",
+          type = "",
+          shape = "point",
+          x = 920,
+          y = 50,
+          width = 0,
+          height = 0,
+          rotation = 0,
+          opacity = 1,
+          visible = true,
+          properties = {
+            ["attackmode"] = "tracking_sweep",
+            ["maxtime"] = 90,
+            ["starttime"] = 30,
+            ["sweepangle"] = 22.5
+          }
         }
       }
     },
@@ -455,6 +652,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -468,6 +666,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         },
@@ -481,6 +680,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         }
@@ -508,8 +708,9 @@ return {
           x = 400,
           y = 240,
           width = 640,
-          height = 80,
+          height = 200,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {}
         }
@@ -539,6 +740,7 @@ return {
           width = 0,
           height = 0,
           rotation = 0,
+          opacity = 1,
           visible = true,
           properties = {
             ["shader"] = "ntsc"
