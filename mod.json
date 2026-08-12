@@ -63,7 +63,10 @@
     "config": {
         "kristal": {
             // End of config
-        }
+        },
+		"chapter4lib": {
+            // End of config
+		}
     },
     // todo: agree on how this should work
     "dlc": {

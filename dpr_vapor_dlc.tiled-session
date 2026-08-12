@@ -1,0 +1,118 @@
+{
+    "activeFile": "scripts/world/maps/intro/slides_1/slides_1.tmx",
+    "expandedProjectPaths": [
+        "scripts/world",
+        "scripts/world/maps/intro/slides_1",
+        "scripts/world/maps",
+        "scripts/world/tilesets",
+        "scripts/world/maps/intro"
+    ],
+    "fileStates": {
+        "scripts/world/maps/intro/crossroads.tmx": {
+            "expandedObjectLayers": [
+                2,
+                3,
+                8
+            ],
+            "scale": 1,
+            "selectedLayer": 3,
+            "viewCenter": {
+                "x": 301.5,
+                "y": 964.5
+            }
+        },
+        "scripts/world/maps/intro/item_1.tmx": {
+            "expandedObjectLayers": [
+                2,
+                3
+            ],
+            "scale": 1,
+            "selectedLayer": 3,
+            "viewCenter": {
+                "x": 401.5,
+                "y": 399.5
+            }
+        },
+        "scripts/world/maps/intro/pillars_1.tmx": {
+            "expandedObjectLayers": [
+                3,
+                4,
+                8,
+                7,
+                9,
+                10
+            ],
+            "scale": 1,
+            "selectedLayer": 10,
+            "viewCenter": {
+                "x": 498.5,
+                "y": 292.5
+            }
+        },
+        "scripts/world/maps/intro/slides_1/slides_1.tmx": {
+            "expandedObjectLayers": [
+                5,
+                3,
+                4,
+                8
+            ],
+            "scale": 0.5,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 963,
+                "y": 383
+            }
+        },
+        "scripts/world/maps/intro/start.tmx": {
+            "expandedObjectLayers": [
+                5
+            ],
+            "scale": 1.5155468749999998,
+            "selectedLayer": 3,
+            "viewCenter": {
+                "x": 319.6865817825661,
+                "y": 239.8474148151967
+            }
+        },
+        "scripts/world/maps/tilesets/vapor.tsx": {
+            "scaleInDock": 1
+        },
+        "scripts/world/tilesets/vapor.tsx": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1.5,
+            "scaleInEditor": 2
+        },
+        "scripts/world/tilesets/vapor_battle.tsx": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1.5,
+            "scaleInEditor": 3
+        },
+        "scripts/world/tilesets/vapor_objects.tsx": {
+            "dynamicWrapping": true,
+            "scaleInDock": 1
+        }
+    },
+    "frame.defaultDuration": 166,
+    "last.exportedFilePath": "C:/Users/diamo/AppData/Roaming/LOVE/dpr/mods/dpr_vapor_dlc/scripts/world/maps/intro/slides_1",
+    "last.externalTilesetPath": "C:/Users/diamo/AppData/Roaming/LOVE/dpr/mods/dpr_vapor_dlc/scripts/world/tilesets",
+    "last.imagePath": "C:/Users/diamo/AppData/Roaming/LOVE/dpr/mods/dpr_vapor_dlc/assets/sprites/tilesets",
+    "map.lastUsedExportFilter": "All Files (*)",
+    "openFiles": [
+        "scripts/world/maps/intro/pillars_1.tmx",
+        "scripts/world/maps/intro/slides_1/slides_1.tmx"
+    ],
+    "project": "dpr_vapor_dlc.tiled-project",
+    "property.type": "float",
+    "recentFiles": [
+        "scripts/world/tilesets/vapor.tsx",
+        "scripts/world/maps/intro/pillars_1.tmx",
+        "scripts/world/maps/intro/slides_1/slides_1.tmx",
+        "scripts/world/tilesets/vapor_battle.tsx"
+    ],
+    "tileset.lastUsedExportFilter": "Lua files (*.lua)",
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.tileSize": {
+        "height": 20,
+        "width": 20
+    }
+}
